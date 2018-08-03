@@ -180,21 +180,21 @@
 					<div class="col-12 col-md-12 col-lg-6 card-details">
 						<p>Card details</p>
 						<div class="card-details-box">
-							<div>
+							<div class="card__item">
 								<p>Card number</p>
-								<input type="text" class="card-number-input" name="card-num-1" maxlength="4">
-								<input type="text" class="card-number-input" name="card-num-2" maxlength="4">
-								<input type="text" class="card-number-input" name="card-num-3" maxlength="4">
-								<input type="text" class="card-number-input" name="card-num-4" maxlength="4">
+								<input type="number" class="card-number-input card__item" name="card-num-1" max="9999">
+								<input type="number" class="card-number-input card__item" name="card-num-2" max="9999">
+								<input type="number" class="card-number-input card__item" name="card-num-3" max="9999">
+								<input type="number" class="card-number-input card__item" name="card-num-4" max="9999">
 							</div>
 							<div class="row card-exp-cvv">
-								<div class="card-expiration form__item">
+								<div class="card-expiration card__item">
 									<p>Expiration date</p>
-									<input type="month" name="expiration-date">
+									<input type="text" name="expiration-date" placeholder="MM/YYYY">
 								</div>
-								<div class="card-cvv form__item">
+								<div class="card-cvv card__item">
 									<p>CVC/CVV</p>
-									<input type="number" name="cvv">
+									<input type="number" name="cvv" max="999">
 								</div>
 							</div>
 						</div>
