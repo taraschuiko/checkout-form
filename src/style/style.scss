@@ -90,7 +90,7 @@ form {
 			outline: none;
 		}
 
-		input:focus {
+		input:focus, select:focus {
 			border-color: #353535;
 		}
 
@@ -160,6 +160,10 @@ form {
 .shipping {
 	margin-top: 80px;
 	
+	@media screen and (min-width: 768px) {
+		padding-right: 15px;
+	}
+	
 	&__methods {
 		color: #979797;
 		margin-top: 28px;
@@ -167,8 +171,15 @@ form {
 		&-item {
 			cursor: pointer;
 			
-			&:not(:last-child) {
-				margin-bottom: 60px;
+			@media screen and (min-width: 768px) {
+				&:not(:last-child) {
+					margin-bottom: 60px;
+				}
+			}
+
+			@media screen and (max-width: 768px) {
+				float: left;
+				margin-bottom: 30px;
 			}
 
 			.fas {
@@ -184,9 +195,35 @@ form {
 				font-size: 14px;
 			}
 
+			&:hover {
+				color: #353535;
+			}
+
 			&--active {
 				color: #353535;
 				cursor: default;
+				position: relative;
+				
+				@media screen and (min-width: 768px) {
+					&:after {
+						content: "";
+						display: block;
+						width: 0; 
+						height: 0; 
+						border-top: 20px solid transparent;
+						border-bottom: 20px solid transparent; 
+						border-right: 20px solid #fff;
+						z-index: 8; 
+						position: absolute;
+						top: 50%;
+						right: -50%;
+						-webkit-transform: translateY(-70%);
+						-moz-transform: translateY(-70%);
+						-ms-transform: translateY(-70%);
+						-o-transform: translateY(-70%);
+						transform: translateY(-70%);
+					}
+				}
 				
 				.fas {
 					color: #FF7E81;
@@ -205,9 +242,14 @@ form {
 		-webkit-border-radius: 20px;
 		border-radius: 20px;
 		padding-bottom: 20px;
-		-webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.16);
-		-moz-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.16);
-		box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.16);
+		-webkit-box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.16);
+		-moz-box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.16);
+		box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.16);
+		
+		@media screen and (max-width: 768px) {
+			margin-left: 15px;
+		}
+		
 		
 		&-active {
 			display: flex;
@@ -244,7 +286,7 @@ form {
 				cursor: pointer;
 				
 				&:hover {
-					background: darken(#fff, 3%);
+					background: darken(#fff, 14%);
 				}
 				
 				i {
@@ -253,6 +295,16 @@ form {
 
 				&:not(:last-child) {
 					margin-right: 10px;
+				}
+			}
+
+			&__method-active {
+				background: #353535;
+				color: #fff;
+				
+				&:hover {
+					background: #353535;
+					cursor: default;
 				}
 			}
 
@@ -355,6 +407,11 @@ input[type=submit] {
 	box-shadow: 0px 0px 32px -12px rgba(0,0,0,0.57);
 	cursor: pointer;
 	margin-bottom: 30px;
+	margin: 30px 15px;
+	
+	@media screen and (max-width: 768px) {
+		// margin-left: 15px;
+	}
 	
 	&:hover {
 		background: #FF7176;

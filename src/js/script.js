@@ -6,12 +6,12 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	$('input').on('focus', function(event) {
-		$(this).parent('.form__item, .card__item').children('p').css('color', '#353535');
+	$('input, select').on('focus', function(event) {
+		$(this).parent('.form__item, .card__item').children('p, i').css('color', '#353535');
 	});
 
-	$('input').on('blur', function(event) {
-		$(this).parent('.form__item, .card__item').children('p').css('color', '#A7A7A7');
+	$('input, select').on('blur', function(event) {
+		$(this).parent('.form__item, .card__item').children('p, i').css('color', '#A7A7A7');
 	});
 
 	$('.form__logo input[type=file]').change(function(event) {
@@ -28,8 +28,23 @@ jQuery(document).ready(function($) {
 	$('div[class^=shipping-payment__method]').on('click', function(event) {
 		event.preventDefault();
 		$('div[class^=shipping-payment__method]').each(function(index, el) {
-			$(this).css('background', '#ffffff');
+			$(this).removeClass('shipping-payment__method-active');
 		});
-		$(this).css('background', '#efefef');
+		$(this).addClass('shipping-payment__method-active');
+	});
+
+	$('.shipping__methods-item').on('click', function(event) {
+		event.preventDefault();
+		var tab = "#" + $(this).attr('id') + "-tab";
+
+		$('.shipping__methods-item').each(function(index, el) {
+			$(this).removeClass('shipping__methods-item--active');
+		});
+
+		$(this).addClass('shipping__methods-item--active');
+		$('.shipping__details').each(function(index, el) {
+			$(this).removeClass('shipping__details-active');
+		});
+		$(tab).addClass('shipping__details-active');
 	});
 });
