@@ -1,0 +1,361 @@
+@font-face {
+	font-family: 'firasans';
+	src: url('../font/firasans-regular-webfont.woff2') format('woff2'),
+	url('../font/firasans-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../font/roboto-regular-webfont.woff2') format('woff2'),
+	url('../font/roboto-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+h2 {
+	font-size: 35px;
+	color: #353535;
+}
+
+.logo {
+	font-family: 'FiraSans', sans-serif;
+	text-align: right;
+	margin-top: 28px;
+	font-size: 23px;
+	color: #353535;
+	
+	&__grey {
+		color: #727272;
+	}
+
+	a {
+		color: inherit;
+	}
+}
+
+form {
+	font-family: 'Roboto', sans-serif;
+	color: #353535;
+}
+
+.form {
+	color: #353535;
+	margin-top: 64px;
+	
+	&__title {
+		margin-bottom: 42px;
+	}
+	
+	&__item {
+		color: #A7A7A7;
+		margin-bottom: 25px;
+		font-size: 16px;
+		position: relative;
+		
+		p {
+			margin-bottom: 3px;
+		}
+
+		// reset select default browser styles
+		select {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			cursor: pointer;
+
+			&::-ms-expand {
+				display: none;
+			}
+		}
+
+		input[type="checkbox"] {
+			-webkit-appearance: checkbox !important;
+			-moz-appearance: checkbox !important;
+			-ms-appearance: checkbox !important;
+			-o-appearance: checkbox !important;
+			appearance: checkbox !important;
+		}
+
+		input, select {
+			width: 100%;
+			padding: 8px;
+			border: 2px solid #A7A7A7;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+			background: transparent;
+			outline: none;
+		}
+
+		input:focus {
+			border-color: #353535;
+		}
+
+		.far, .fas {
+			font-size: 24px;
+			position: absolute;
+			top: calc(50% + 13px);
+			right: 16px;
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+
+		label[for="accept-terms"] {
+			display: flex;
+			-webkit-align-items: center;
+			align-items: center;
+			cursor: pointer;
+			
+			input {
+				width: auto;
+				cursor: pointer;
+			}
+
+			p {
+				margin: 0;
+				margin-left: 1em;
+			}
+		}
+	}
+
+	&__items-50 {
+		display: flex;
+		.form__item {
+			width: calc(50% - 5px);
+			
+			&:first-child {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	&__logo {
+		color: #FF8285;
+		padding: 6px;
+		cursor: pointer;
+		position: absolute;
+		top: 44%;
+		left: 100%;
+		z-index: 6;
+		white-space: nowrap;
+		margin-left: 0;
+		
+		@media screen and (max-width: 768px) {
+			position: static;
+		}
+
+		label {
+			margin-bottom: 0;
+			cursor: pointer;
+		}
+	}
+}
+
+.shipping {
+	margin-top: 80px;
+	
+	&__methods {
+		color: #979797;
+		margin-top: 28px;
+		
+		&-item {
+			cursor: pointer;
+			
+			&:not(:last-child) {
+				margin-bottom: 60px;
+			}
+
+			.fas {
+				margin-top: 6px;
+			}
+
+			.fas, .shipping__methods-title {
+				font-size: 20px;
+				margin-bottom: 0;
+			}
+
+			.shipping__methods-description {
+				font-size: 14px;
+			}
+
+			&--active {
+				color: #353535;
+				cursor: default;
+				
+				.fas {
+					color: #FF7E81;
+				}
+			}
+		}
+	}
+
+	&__details {
+		display: none;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-align-items: center;
+		align-items: center;
+		padding-top: 14px;
+		-webkit-border-radius: 20px;
+		border-radius: 20px;
+		-webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.16);
+		-moz-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.16);
+		box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.16);
+		
+		&-active {
+			display: flex;
+		}
+
+		.shipping-payment, .card-details {
+			p {
+				margin-bottom: 8px;
+				margin-left: 5px;
+				color: #979797;
+			}
+		}
+
+		.shipping-payment {
+			margin-bottom: 10px;
+			
+			& > p {
+				margin-left: -8px;
+			}
+
+			&__method-1, &__method-4 {
+				-webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.16);
+				-moz-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.16);
+				box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.16);
+				margin: 6px;
+				display: flex;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-align-items: center;
+				align-items: center;
+				padding: 15px 0;
+				-webkit-border-radius: 4px;
+				border-radius: 4px;
+				cursor: pointer;
+				
+				&:hover {
+					background: darken(#fff, 3%);
+				}
+				
+				i {
+					font-size: 38px;
+				}
+
+				&:not(:last-child) {
+					margin-right: 10px;
+				}
+			}
+
+			&__method-1 {
+				width: calc(100% - 16px);
+			}
+
+			&__method-4 {
+				width: calc(25% - 16px);
+			}
+		}
+
+		.card-details {
+			margin-bottom: 10px;
+			
+			&-box {
+				-webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.16);
+				-moz-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.16);
+				box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.16);
+				-webkit-border-radius: 20px;
+				border-radius: 20px;
+				padding: 10px;
+				margin-top: 14px;
+				padding-top: 18px;
+				
+				p {
+					margin-bottom: 2px;
+				}
+
+				input {
+					padding: 8px;
+					border: 2px solid #A7A7A7;
+					-webkit-border-radius: 4px;
+					border-radius: 4px;
+					background: transparent;
+					outline: none;
+					margin-bottom: 28px;
+					
+					&:focus {
+						border-color: #353535;
+					}
+				}
+
+				.form__item {
+					margin-bottom: 0;
+				}
+
+				.card-number-input {
+					width: calc(25% - 12px);
+					&:not(:last-child) {
+						margin: 5px;
+					}
+				}
+
+				.card-exp-cvv {
+					display: flex;
+					-webkit-justify-content: space-between;
+					justify-content: space-between;
+					padding-right: 20px;
+				}
+
+				.card-expiration {
+					width: 50%;
+					padding-left: 14px;
+				}
+
+				input[name=expiration-date] {
+					margin-left: 6px;
+					width: 100%;
+				}
+
+				.card-cvv {
+					width: 25%;
+					
+					p {
+						margin-left: 0;
+					}
+				}
+
+				input[name=cvv] {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+input[type=submit] {
+	color: #FFF;
+	background: linear-gradient(to right, #FF7176 , #E9282F);
+	border: none;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	padding: 16px 90px;
+	float: right;
+	margin-top: 30px;
+	text-transform: uppercase;
+	-webkit-box-shadow: 0px 0px 32px -12px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 0px 32px -12px rgba(0,0,0,0.57);
+	box-shadow: 0px 0px 32px -12px rgba(0,0,0,0.57);
+	cursor: pointer;
+	margin-bottom: 30px;
+	
+	&:hover {
+		background: #FF7176;
+	}
+}
