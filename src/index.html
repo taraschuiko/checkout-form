@@ -22,11 +22,11 @@
 					<div class="form__items-50">
 						<div class="form__item">
 							<p>Name</p>
-							<input type="text" name="name">
+							<input type="text" name="name" autocomplete="given-name">
 						</div>
 						<div class="form__item">
 							<p>Surname</p>
-							<input type="text" name="surname">
+							<input type="text" name="surname" autocomplete="family-name">
 						</div>
 					</div>
 					<div class="form__item">
@@ -41,18 +41,18 @@
 					</div>
 					<div class="form__item">
 						<p>Email</p>
-						<input type="text" name="email">
+						<input type="text" name="email" autocomplete="email">
 						<i class="far fa-envelope"></i>
 					</div>
 					<div class="form__item">
 						<p>Phone number</p>
-						<input type="text" name="phone">
+						<input type="text" name="phone" autocomplete="tel">
 					</div>
 				</div>
 				<div class="col-12 col-md-5">
 					<div class="form__item">
 						<p>Country</p>
-						<select name="country" id="form-country">
+						<select name="country" id="form-country" autocomplete="country">
 							<option value="none" disabled selected></option>
 							<option value="Ukraine">Ukraine</option>
 							<option value="Germany">Germany</option>
@@ -65,16 +65,16 @@
 					<div class="form__items-50">
 						<div class="form__item">
 							<p>City</p>
-							<input type="text" name="city">
+							<input type="text" name="city" autocomplete="locality">
 						</div>
 						<div class="form__item">
 							<p>Postal code</p>
-							<input type="text" name="postal-code">
+							<input type="text" name="postal-code" autocomplete="postal-code">
 						</div>
 					</div>
 					<div class="form__item">
 						<p>Address</p>
-						<input type="text" name="address">
+						<input type="text" name="address" autocomplete="street-address">
 					</div>
 					<div class="form__item">
 						<label for="accept-terms">
@@ -146,7 +146,7 @@
 								</div>
 								<div class="card-cvv card__item">
 									<p>CVC/CVV</p>
-									<input type="number" name="cvv" max="999">
+									<input type="number" name="cvv" max="999" autocomplete="cc-csc">
 								</div>
 							</div>
 						</div>
