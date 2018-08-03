@@ -16,6 +16,12 @@
 
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 h2 {
 	font-size: 35px;
 	color: #353535;
@@ -386,6 +392,9 @@ form {
 
 				input[name=cvv] {
 					width: 100%;
+					-webkit-appearance: none;
+					   -moz-appearance: none;
+					        appearance: none;
 				}
 			}
 		}
