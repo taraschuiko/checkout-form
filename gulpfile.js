@@ -43,3 +43,6 @@ gulp.task('watch', function() {
 	gulp.watch('./src/js/*.js', ['uglify']);
 	gulp.watch('./src/img/*', ['imagemin']);
 });
+
+// would bee good if you define default task e.g.
+// gulp.task('default', ['watch']);
