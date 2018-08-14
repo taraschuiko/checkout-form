@@ -7,11 +7,11 @@ jQuery(document).ready(function($) {
 	});
 
 	$('input, select').on('focus', function(event) {
-		$(this).closest('.form__item, .card__item').find('p, i').css('color', '#353535');
+		$(this).parents('.form__item, .card__item').find('p, i').css('color', '#353535');
 	});
 
 	$('input, select').on('blur', function(event) {
-		$(this).closest('.form__item, .card__item').find('p, i').css('color', '#A7A7A7');
+		$(this).parents('.form__item, .card__item').find('p, i').css('color', '#A7A7A7');
 	});
 
 	$('.form__logo input[type=file]').change(function(event) {
