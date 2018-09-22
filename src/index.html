@@ -5,6 +5,7 @@
 	<title>Form</title>
 	<link rel="icon" type="image/png" href="img/favicon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- better approach is to use those components of framework that you actually need, not whole framework -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style/style.min.css">
 	<link rel="stylesheet" href="fontawesome/css/all.min.css">
@@ -19,9 +20,9 @@
 			<div class="form row justify-content-between">
 				<h2 class="form__title col-12">Fill in the form</h2>
 				<div class="col-12 col-md-5">
-					<div class="form__items-50">
+					<div class="form__items-50"> <!-- instead of writing your own layout class you can use framework grid class -->
 						<div class="form__item">
-							<p>Name</p>
+							<p>Name</p> <!-- semantically correct use <label> with "for" attribute instead of <p> tag -->
 							<input type="text" name="name" autocomplete="given-name">
 						</div>
 						<div class="form__item">
@@ -33,7 +34,7 @@
 						<p>Company name</p>
 						<input type="text" name="company">
 						<div class="form__logo">
-							<input type="file" style="display: none" id="upload-file">
+							<input type="file" style="display: none" id="upload-file"> <!-- avoid inline styles -->
 							<label for="upload-file">
 								+ Add logo
 							</label>
